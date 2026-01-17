@@ -1,4 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 
 
@@ -44,4 +47,5 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         controller.Move(movimiento);
     }
+
 }

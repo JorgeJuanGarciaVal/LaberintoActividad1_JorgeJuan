@@ -17,10 +17,20 @@ public class TrampaTecho : MonoBehaviour
 
     void Update()
     {
-        Vector3 target = goingDown ? posicionFinal : posicionInicial;
+        Vector3 target;
+
+        if (goingDown)
+        {
+            target = posicionFinal;
+        }
+        else
+        {
+            target = posicionInicial;
+        }
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+        //Si el techo llega a la posición final, se invierte su direccion de movimiento para que haga el movimiento de subir y bajar
         if (Vector3.Distance(transform.position, target) < 0.01f)
-            goingDown = !goingDown;
+           goingDown = !goingDown;
     }
 }

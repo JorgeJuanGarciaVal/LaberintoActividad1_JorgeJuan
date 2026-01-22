@@ -7,7 +7,7 @@ public class Trampa : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        // Comprueba que quien entra es el Player
+        //Comprueba que el objeto que detecta es el jugador. Si no es el jugador, lo ignora.
         if (!other.CompareTag("Player")) return;
 
         Reaparicion reaparicion = other.GetComponent<Reaparicion>();
